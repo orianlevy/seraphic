@@ -29,8 +29,7 @@ const BarGraphItem = ({value, index}) => {
     }, []);
 
     return (
-        <ItemWrapper height={value} index={localIndex}>
-        </ItemWrapper>
+        <ItemWrapper height={value} index={localIndex} />
     );
 };
 
