@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   font-family: sans-serif;
   display: flex;
   flex-direction: column;
-  width: ${({width}) => width*30}px;
+  width: ${({width}) => width*31}px;
   
 `;
 

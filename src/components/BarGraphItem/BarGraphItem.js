@@ -16,6 +16,7 @@ const ItemWrapper = styled.div`
   background-color: ${({index}) => COLORS_PALETTE[index]};
   height: ${({height}) => height+10}px;
   margin: 7px;
+  width: 20px;
   color: ${({index}) => COLORS_PALETTE[index]};
 `;
 
@@ -29,7 +30,6 @@ const BarGraphItem = ({value, index}) => {
 
     return (
         <ItemWrapper height={value} index={localIndex}>
-            <span>{value}</span>
         </ItemWrapper>
     );
 };
