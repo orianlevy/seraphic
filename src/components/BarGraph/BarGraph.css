@@ -1,0 +1,13 @@
+.graphContainer {
+    border: 1px solid black;
+    display: flex;
+    transform: rotate(180deg) scaleX(-1);
+}
+
+.labels {
+    display: flex;
+}
+
+.label {
+    margin: 10px;
+}

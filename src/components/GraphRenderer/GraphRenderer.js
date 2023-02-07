@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from "react";
 import "./GraphRenderer.scss";
+import BarGraph from "../BarGraph/BarGraph";
 
 const GraphRenderer = ({ render, data }) => {
     const [count, setCount] = useState(data.length);
@@ -23,7 +24,7 @@ const GraphRenderer = ({ render, data }) => {
                 </button>
             </header>
 
-            <section>{render(dataSlice)}</section>
+            <BarGraph data={dataSlice} count={count}/>
         </div>
     );
 };

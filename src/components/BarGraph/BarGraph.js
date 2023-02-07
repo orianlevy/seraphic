@@ -1,13 +1,28 @@
 import React from "react";
+import "./BarGraph.css"
+import styled from "styled-components";
+import BarGraphItem from "../BarGraphItem/BarGraphItem";
 
-// Use either a function component
-// const BarGraph = () => { ... };
+const Wrapper = styled.div`
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: ${({width}) => width*30}px;
+  
+`;
 
-// Or a class component
-// class BarGraph extends React.Component { ... }
+const BarGraph = ({data, count}) => {
+    return (
+        <Wrapper width={count}>
+            <div className="graphContainer">
+                {data.map((item, index)=>{return <BarGraphItem key={index} index={index} className="label" value={item.value}/>})}
+            </div>
+            <div className="labels">
+                {data.map((item, index)=>{return <div key={index} className="label">{item.label}</div>})}
+            </div>
 
-const BarGraph = () => {
-    return <>Seraphic Security</>
+        </Wrapper>
+    )
 }
 
 export default BarGraph;
